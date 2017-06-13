@@ -14,9 +14,9 @@ class App extends Component {
     this.onSearchRequest = this.onSearchRequest.bind(this)
   }
 
-  onSearchRequest(){
+  onSearchRequest(name){
     axios({
-      url:"https://www.mysportsfeeds.com/api/feed/pull/nba/2017/cumulative_player_stats.json?player=smith",
+      url:`https://www.mysportsfeeds.com/api/feed/pull/nba/2017/cumulative_player_stats.json?player=${name}`,
       method:'get',
       auth: {
         username: 'momo989',

@@ -1,14 +1,14 @@
 import React, {Component} from 'react'
 
-class SearchListItem extends Component{
-
-  render(){
-    return(
-      <div>
-      <h1> hi</h1>
-      </div>
-    )
-
-  }
+const SearchListItem = ({player})=>{
+  return(
+    <ul>
+      {player.FirstName}
+      {' '}
+      {player.LastName}
+    </ul>
+  )
 }
+
+
 export default SearchListItem

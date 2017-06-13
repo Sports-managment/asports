@@ -13,9 +13,9 @@ const SearchList = (props)=>{
 
   })
     return(
-      <div>
-
-      </div>
+      <ul className="col-md-4 list-group">
+        {searchItem}
+      </ul>
     )
 }
 export default SearchList
