@@ -3,10 +3,10 @@ import React, {Component} from 'react'
 const SearchListItem = ({player, onClickForDetail})=>{
   return(
     <ul >
-    <button onClick={()=>onClickForDetail()}>
-       {player.FirstName}
+    <button onClick={()=>onClickForDetail(player)}>
+       {player.player.FirstName}
       {' '}
-      {player.LastName}
+      {player.player.LastName}
     </button>
     </ul>
   )

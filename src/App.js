@@ -27,11 +27,11 @@ class App extends Component {
         if (!res.data.cumulativeplayerstats.playerstatsentry) {
           return
         }
-        const searchValue = res.data.cumulativeplayerstats.playerstatsentry.map(obj => obj.player)
+        const searchValue = res.data.cumulativeplayerstats.playerstatsentry.map(obj => obj)
         this.setState({ searchValue })
       })
   }
-  
+
   render() {
     return (
       <div>

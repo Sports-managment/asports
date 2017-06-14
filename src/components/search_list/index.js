@@ -6,8 +6,9 @@ class SearchList extends Component{
     super();
   }
 
-  onClickForDetail(){
-    console.log("mosshhh");
+  onClickForDetail(player){
+    console.log("mosshhh", player);
+
   }
   render(){
     return(
@@ -17,7 +18,7 @@ class SearchList extends Component{
           return (
             <SearchListItem
             onClickForDetail = {this.onClickForDetail}
-            key={player.FirstName}
+            key={player.player.FirstName}
             player={player}
             />
           )
