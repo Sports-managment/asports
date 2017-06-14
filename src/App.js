@@ -21,18 +21,17 @@ class App extends Component {
       auth: {
         username: 'momo989',
         password: 'moshiko1988'
-      },
-      data:{
-        team: 'bos'
       }
     })
       .then(res => {
-        console.log('thi111', res.data.cumulativeplayerstats.playerstatsentry)
-        const searchValue = res.data.cumulativeplayerstats.playerstatsentry.map(obj => obj.player);
-        this.setState({ searchValue });
-        console.log('this is posts', searchValue);
-      });
+        if (!res.data.cumulativeplayerstats.playerstatsentry) {
+          return
+        }
+        const searchValue = res.data.cumulativeplayerstats.playerstatsentry.map(obj => obj.player)
+        this.setState({ searchValue })
+      })
   }
+  
   render() {
     return (
       <div>
