@@ -1,15 +1,21 @@
 import React, {Component} from 'react'
 import SearchListItem from '../search_list_item/index'
+import PlayerStats from '../player_stats/index'
 
 class SearchList extends Component{
   constructor(){
     super();
+    this.state = {
+      player: null
+    }
+    this.onClickForDetail = this.onClickForDetail.bind(this)
   }
 
   onClickForDetail(player){
-    console.log("mosshhh", player);
-
+    // console.log(player);
+    this.setState({player: player.team})
   }
+
   render(){
     return(
 // onClick={this.onClickForDetail}
@@ -23,6 +29,9 @@ class SearchList extends Component{
             />
           )
         })}
+        <PlayerStats
+          player = {this.state.player}
+          />
       </ul>
     )
   }
