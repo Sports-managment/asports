@@ -7,9 +7,11 @@ const PlayerStats = ({ player }) => {
   return(
     <div>
     {console.log('player->', player)}
-    <ol>City: {player.City}</ol>
-    <ol>Abbreviation: {player.Abbreviation}</ol>
-    <ol>Name: {player.Name}</ol>
+    <ol>City: {player.team.City}</ol>
+    <ol>Abbreviation: {player.team.Abbreviation}</ol>
+    <ol>Name: {player.team.Name}</ol>
+    <ol>Jersey Number: {player.player.JerseyNumber}</ol>
+    <ol>Position: {player.player.Position} </ol>
     </div>
   )
 }

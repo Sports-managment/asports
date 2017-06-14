@@ -13,7 +13,7 @@ class SearchList extends Component{
 
   onClickForDetail(player){
     // console.log(player);
-    this.setState({player: player.team})
+    this.setState({player: player})
   }
 
   render(){
